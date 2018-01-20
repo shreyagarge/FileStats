@@ -8,7 +8,7 @@ class FileParser:
         # number of letters array and number of occurences per letter
         # hashmap are declared globally because we want the file to be
         # parsed only once and the results from each word and each line
-        # are updated to these after each function call with every single 
+        # are updated to these after each function call with every single
         #  word and line
         self.nletters = []
         self.lettercount = {}
@@ -23,7 +23,7 @@ class FileParser:
         word = word.strip().lower()
         for i in range(0, len(word)):
             if word[i].isalpha():
-        # if the alphabet is seen previously, update count, else create new key
+                # if the alphabet is seen previously, update count, else create new key
                 if word[i] in self.lettercount.keys():
                     self.lettercount[word[i]] += 1
                 else:
@@ -31,8 +31,8 @@ class FileParser:
 
     def parse_line(self, line):
         wordcount = 0
-        # update wordcount for each word read, and append its letter count to 
-        # the nletters array, then send the word for further processing to 
+        # update wordcount for each word read, and append its letter count to
+        # the nletters array, then send the word for further processing to
         # get number of occurences of the letters in the word
         for word in line.strip().split(' '):
             wordcount += 1
@@ -41,7 +41,7 @@ class FileParser:
         return wordcount
 
     def parse_file(self, file_name):
-        #try to open the file, catch exeption and exit if the path is invalid
+        # try to open the file, catch exeption and exit if the path is invalid
         try:
             my_file = open(file_name, "r")
         except IOError:
@@ -50,8 +50,9 @@ class FileParser:
             sys.exit(1)
         linecount = 0
         wordcount = 0
-        # reading each line, update line count and send the line for further 
+        # reading each line, update line count and send the line for further
         # processing to obtain the wordcounts of each line
+
         for line in my_file:
             if line.rstrip():
                 linecount += 1
@@ -59,7 +60,7 @@ class FileParser:
         return linecount, wordcount
 
     def process(self):
-        # calling parse_file from here to avoid parsing the file multiple number 
+        # calling parse_file from here to avoid parsing the file multiple number
         # of times to obtain all the statistics. This way, everything is computed
         # by parsing the file just once
         line_count, word_count = self.parse_file(self.filename)
@@ -76,11 +77,11 @@ if __name__ == "__main__":
     filename = raw_input("Enter File path :\n")
     # if filename == "":
     #     filename = "files/test.txt"
-    #call the parser function with the input file name
-    #this function returns the required statistics about the file
+    # call the parser function with the input file name
+    # this function returns the required statistics about the file
     parser_ = FileParser(filename)
     lc, wc, mv, al = parser_.process()
-    #print the results
+    # print the results
     print "Line count: ", lc
     print "Word count: ", wc
     print "Average number of characters per word: ", mv
