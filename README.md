@@ -12,7 +12,7 @@ a library that computes the following statistics about a text file
 * files - folder containing a text files used for verification
 * faust.txt - the file used for validation in thr unit tests. (Not to be modified)
 
-### steps to run
+#### steps to run
 from FileStats folder run
   python fileParser.py
 when prompted, enter path to the file relative to FileStat/ folder if placed within that folder or the full path otherwise
