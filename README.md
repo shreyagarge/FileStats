@@ -1,3 +1,4 @@
+
 # FileStats (Python Implementation)
 a library that computes the following statistics about a text file
 * Line count (number of non empty lines)
@@ -14,8 +15,14 @@ a library that computes the following statistics about a text file
 
 #### steps to run
 from FileStats folder run
-  python fileParser.py
+
+      python fileParser.py
+
 when prompted, enter path to the file relative to FileStat/ folder if placed within that folder or the full path otherwise
-  python fileParser_Tests.py
+  
+
+    python fileParser_Tests.py
+
 to run the unit tests
     
+
