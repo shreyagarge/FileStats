@@ -11,7 +11,7 @@ a library that computes the following statistics about a text file
 * fileParser.py - contains the methods for computing the statistics
 * fileParser_Tests.py - contains the unit tests for these methods
 * files - folder containing a text files used for verification
-* faust.txt - the file used for validation in thr unit tests. (Not to be modified)
+* faust.txt - the file used for validation in the unit tests. (Not to be modified)
 
 #### steps to run
 from FileStats folder run
