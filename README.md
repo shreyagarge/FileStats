@@ -1,6 +1,6 @@
 
 # FileStats (Python Implementation)
-a library that computes the following statistics about a text file
+a library that computes the following statistics about a text file (task 20150701)
 * Line count (number of non empty lines)
 * Word count (number of white space Delimited words containing either special characters or alphanumerals)
 * Average number if characters per word (including special characters and alphanumerals)
